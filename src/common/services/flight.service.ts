@@ -4,7 +4,9 @@ import {Flight} from "../interfaces/flight.interface";
 import {FlightHttpService} from "./flight-http.service";
 
 /**
- *
+ * This is a mock service provided in case of handling the State management Via Behavioural Subject
+ * This is coupled with the `flight-http.service.ts` because they handle different responsibilities
+ * I have left the previous implementations commented or not commented in the component files just to showcase different ways to go about the solution
  * */
 @Injectable
 ({providedIn: 'root'})
