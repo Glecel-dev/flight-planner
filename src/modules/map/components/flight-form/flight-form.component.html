@@ -1,0 +1,22 @@
+<h2 class="coordinates-header">Flight's coordinates list</h2>
+<div class="coordinates-wrapper" *ngFor="let coordinates of flightCoordinates; let i = index">
+  <div class="coordinates-row is-odd__{{i % 2 == 0}}">
+    <span class="coordinates-row__index">{{i}}.</span>
+    <span class="coordinates-row__lat">Latitude: <b>{{coordinates.lat.toString()}}</b></span>
+    <span class="coordinates-row__lng">Longitude: <b>{{coordinates.lng.toString()}}</b></span>
+    <button
+      mat-icon-button
+      matTooltip="Delete"
+      color="accent"
+      (click)="deleteCoordinate(i)"
+      aria-label="">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
+<button
+  mat-raised-button
+  (click)="saveFlight()"
+  color="primary">
+  Submit
+</button>

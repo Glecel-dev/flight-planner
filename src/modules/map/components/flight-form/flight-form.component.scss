@@ -1,0 +1,20 @@
+:host {
+  flex: 1
+}
+.coordinates-row {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 520px;
+
+  &__index {
+    margin-left: 3px;
+  }
+}
+
+.is-odd__true {
+  background-color: #dcdcdc;
+}

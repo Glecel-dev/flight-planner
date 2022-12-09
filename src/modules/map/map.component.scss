@@ -1,0 +1,14 @@
+.flights-wrapper{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 25px;
+}
+.flight-data{
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

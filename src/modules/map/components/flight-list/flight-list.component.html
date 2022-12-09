@@ -1,0 +1,21 @@
+<div *ngFor="let flight of flights$ | async">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Flight nr {{flight._id}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div *ngFor="let coordinates of flight.flights; let i=index">
+        <div class="coordinates-row">
+          <span class="coordinates-row__index">{{i}}.</span>
+          <span class="coordinates-row__lat">Latitude: <b>{{coordinates.lat.toString()}}</b></span>
+          <span class="coordinates-row__lng">Longitude: <b>{{coordinates.lng.toString()}}</b></span>
+        </div>
+        </div>
+      <mat-action-row>
+        <button mat-button color="primary" (click)="editFlightCoordinates.emit(flight)">Edit</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

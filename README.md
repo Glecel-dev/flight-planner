@@ -1,6 +1,35 @@
 # FlightPlanner
+![til](./src/assets/images/Example.gif)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+## Project structure
+
+### assets
+
+- Common assets are stored here. They are accessible in all parent repos. It is unnecessary to add them to the parent repos again. The core assets url is `/assets/core`.
+
+### components
+
+- Simple reusable components.
+
+- Ideal for presentational-only components or components with simple dependency injections.
+
+### map
+
+- Developed using @angular/google-maps
+
+### modules
+
+- Features with multiple related components and services.
+
+- Used when a feature has multiple views or dialogs.
+### store
+
+- Currently, the state management has gone two iterations.
+
+- You can find the commented out implementation using BehaviouralSubject and the current one done with ngrxStore
+
+
 
 ## Development server
 
@@ -18,10 +47,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+

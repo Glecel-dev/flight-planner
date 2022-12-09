@@ -1,0 +1,17 @@
+<div class="flights-wrapper">
+  <div class="flight-data">
+    <h2>Flight list</h2>
+    <app-flight-list
+      (editFlightCoordinates)="editFlight($event)">
+    </app-flight-list>
+    <app-flight-form
+      [flightCoordinates]="flightCoordinates"
+      [flightId] = 'id'
+      (deleteFlightCoordinates)="flightCoordinates=$event">
+    </app-flight-form>
+  </div>
+  <app-flight-map
+    [markers]="flightCoordinates"
+    (emitCoordinates)="flightCoordinates=$event"
+  ></app-flight-map>
+</div>

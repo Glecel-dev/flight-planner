@@ -1,0 +1,12 @@
+.coordinates-row {
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+
+  &__index {
+    margin-left: 3px;
+  }
+}

@@ -1,0 +1,18 @@
+<div *ngIf="apiLoaded" class="map-wrapper">
+  <google-map
+    [width]="700" [height]="700"
+    [options]="mapOptions"
+    [center]="geo"
+    [zoom]="zoom"
+    (mapClick)="onMapClick($event)">
+
+    <ng-container *ngIf="markers.length">
+      <map-marker *ngFor="let m of markers; let i = index" #marker="mapMarker"
+                  [position]="m"
+                  [icon] = "icon"
+                  [label]="i.toString()">
+      </map-marker>
+      <map-polyline [options]="flightPath" [path]="markers" #polyline='mapPolyline'></map-polyline>
+    </ng-container>
+  </google-map>
+</div>
