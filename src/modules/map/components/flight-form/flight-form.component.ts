@@ -14,13 +14,19 @@ export class FlightFormComponent implements OnInit {
     private store: Store
   ) {
   }
-
+  /**
+   * A simple solution for solving the ID injection without exposing it to the URL
+   * */
   @Input()
   flightId: string | undefined
-
+  /**
+   * An Input for the Google Map Coordinates Array needed
+   * */
   @Input()
   flightCoordinates: google.maps.LatLngLiteral[] = [];
-
+  /**
+   * Emitter when a set of coordinates is deleted
+   * */
   @Output()
   deleteFlightCoordinates = new EventEmitter();
 

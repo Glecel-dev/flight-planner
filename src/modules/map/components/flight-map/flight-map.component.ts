@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import {CLASSIC_MAP_STYLES} from "../../../../common/cons/googleMapClassic.styles";
+import {CLASSIC_MAP_STYLES} from "../../../../common/consts/googleMapClassic.styles";
 import {GoogleMapsService} from "../../services/map.service";
 import MapMouseEvent = google.maps.MapMouseEvent;
 import IconMouseEvent = google.maps.IconMouseEvent;

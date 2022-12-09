@@ -1,6 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MapComponent } from './map.component';
+import {FlightMapComponent} from "./components/flight-map/flight-map.component";
+import {FlightListComponent} from "./components/flight-list/flight-list.component";
+import {FlightFormComponent} from "./components/flight-form/flight-form.component";
+import {StoreModule} from "@ngrx/store";
+import {provideMockStore} from "@ngrx/store/testing";
 
 describe('MapComponent', () => {
   let component: MapComponent;
@@ -8,7 +13,14 @@ describe('MapComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MapComponent ]
+      declarations: [ MapComponent, FlightMapComponent,FlightListComponent,FlightFormComponent ],
+      imports:[
+        StoreModule.forRoot({}, {}),
+
+      ],
+      providers:[
+        provideMockStore({})
+      ],
     })
     .compileComponents();
 

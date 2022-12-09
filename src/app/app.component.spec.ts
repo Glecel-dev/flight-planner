@@ -1,12 +1,24 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import {MapComponent} from "../modules/map/map.component";
+import {MapModule} from "../modules/map/map.module";
+import {provideMockStore} from "@ngrx/store/testing";
+import {StoreModule} from "@ngrx/store";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        MapComponent,
       ],
+      providers:[
+        provideMockStore({}),
+      ],
+      imports:[
+        MapModule,
+        StoreModule.forRoot({}, {}),
+      ]
     }).compileComponents();
   });
 

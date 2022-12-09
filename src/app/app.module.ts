@@ -13,7 +13,6 @@ import {flightReducer} from "../common/store/flight/flight.reducer";
   ],
     imports: [
         BrowserModule,
-        StoreModule.forRoot({}, {}),
         BrowserAnimationsModule,
         MapModule,
         StoreModule.forRoot({flightEntries:flightReducer})

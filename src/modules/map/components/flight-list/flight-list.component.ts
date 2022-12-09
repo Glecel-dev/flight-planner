@@ -18,6 +18,9 @@ export class FlightListComponent implements OnInit{
    // private flightService:FlightService,
    private store:Store
   ) {
+    /**
+     * Getting all the flights array from the ngrx store
+     * */
     this.flights$ = store.select(selectAllFlights)
   }
 
